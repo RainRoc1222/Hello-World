@@ -40,10 +40,10 @@ namespace Hello_World
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            bool IsNow = false;
+            bool IsNow = true;
 
      
-            while (!IsNow)
+            while (IsNow)
             {
                 await Task.Delay(sec);
                 labelTime.Text = DateTime.Now.ToString();
