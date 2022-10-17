@@ -42,7 +42,7 @@ namespace Hello_World
         {
             bool IsNow = false;
 
-            //解法一
+     
             while (!IsNow)
             {
                 await Task.Delay(sec);
