@@ -49,22 +49,6 @@ namespace Hello_World
                 labelTime.Text = DateTime.Now.ToString();
             }
 
-            //解法二
-            //do
-            //{
-            //    await Task.Delay(sec);
-            //    labelTime.Text = DateTime.Now.ToString();
-            //}
-            //while (!IsNow);
-
-            //解法三
-            //for(int i = 0; i <= 0; i++)
-            //{
-            //    await Task.Delay(sec);
-            //    labelTime.Text = DateTime.Now.ToString();
-            //    i--;
-            //}
-
             
         }
 
