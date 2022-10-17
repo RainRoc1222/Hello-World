@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hello_World.Properties;
 namespace Hello_World
 {
     public partial class Form1 : Form
     {
+        private int sec = 1000;
+     
         public Form1()
         {
             InitializeComponent();
-            timer1.Start();
         }
 
         private void btnSay_Click(object sender, EventArgs e)
@@ -25,17 +26,27 @@ namespace Hello_World
 
         private async void Count_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i <= 10; i++)
+          
+            for (int i = 0; i <= 10; i++)
             {
-                await Task.Delay(1000);
+                await Task.Delay(sec);
                 labelCount.Text = i.ToString();
+               
             }
         }
 
 
-        private void timer1_Tick_1(object sender, EventArgs e)
+
+
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            labelTime.Text = DateTime.Now.ToString();
+            for(int i =0;i <=1; i++)
+            {
+                await Task.Delay(sec);
+                labelTime.Text = DateTime.Now.ToString();
+                i--;
+            }
         }
+
     }
 }
