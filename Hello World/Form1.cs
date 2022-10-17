@@ -40,12 +40,30 @@ namespace Hello_World
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            for(int i =0;i <=1; i++)
+            bool IsNow = false;
+
+            //解法一
+            while (!IsNow)
             {
                 await Task.Delay(sec);
                 labelTime.Text = DateTime.Now.ToString();
-                i--;
             }
+
+            //解法二
+            //do
+            //{
+            //    await Task.Delay(sec);
+            //    labelTime.Text = DateTime.Now.ToString();
+            //}
+            //while (!IsNow);
+
+            //解法三
+            //for(int i = 0; i <= 0; i++)
+            //{
+            //    await Task.Delay(sec);
+            //    labelTime.Text = DateTime.Now.ToString();
+            //    i--;
+            //}
         }
 
     }
