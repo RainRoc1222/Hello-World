@@ -24,30 +24,21 @@ namespace Hello_World
             labelHelloWorld.Text = "Hello World!";
         }
 
-        private async void Count_Click(object sender, EventArgs e)
+        private  void Count_Click(object sender, EventArgs e)
         {
           
-            for (int i = 0; i <= 10; i++)
-            {
-                await Task.Delay(sec);
-                labelCount.Text = i.ToString();
-               
-            }
+            Test test = new Test();
+            test.Count(sec,labelCount);
         }
 
 
 
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private  void Form1_Load(object sender, EventArgs e)
         {
-            
-            while (true)
-            {
-                await Task.Delay(sec);
-                labelTime.Text = DateTime.Now.ToString();
-            }
-
-            
+            Test test = new Test();
+            test.Count(sec, labelTime, true);
+         
         }
 
     }
