@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Threading;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace Hello_WPF
 {
@@ -24,14 +25,16 @@ namespace Hello_WPF
     public partial class MainWindow : Window
     {
       
-        private int sec = 100;
-        public ChangeProperty _ChangeProperty; 
+        private int sec = 1000;
+        public ChangeProperty _ChangeProperty = new ChangeProperty();
+
+        public string HelloText { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            _ChangeProperty = new ChangeProperty();
+           
             DataContext = _ChangeProperty; 
            
         }
