@@ -1,0 +1,47 @@
+﻿<Window x:Class="WrapPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WrapPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="300"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!--預設為Orientation="Horizontal，從左至右排列，當window寬度不夠時
+        ，子控件會自動換行，繼續按照從左至右的排列-->
+        <WrapPanel>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+            <Button>BTN1</Button>
+        </WrapPanel>
+
+        <!--Orientation="Vertical"，從上至下排列，window高度不夠時
+        ，子控件會自動換行，繼續依據從上至下的排列-->
+        <WrapPanel Orientation="Vertical" Margin="0 150 0 0">
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+            <Button Background="Red">BTN2</Button>
+
+        </WrapPanel>
+    </Grid>
+</Window>

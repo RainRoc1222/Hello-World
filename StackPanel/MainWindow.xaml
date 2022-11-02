@@ -1,0 +1,35 @@
+﻿<Window x:Class="StackPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StackPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--StackPanel預設為水平排列，Orientation="Vertical"-->
+        <StackPanel Orientation="Horizontal">
+            <Button>BTN1</Button>
+            <Button>BTN2</Button>
+            <Button>BTN3</Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Button>BTN4</Button>
+            <Button>BTN5</Button>
+            <Button>BTN6</Button>
+        </StackPanel>
+        
+        <!--原本排序應該為789，但加了FlowDirection屬性的RightToLeft
+        ，所以排序顛倒變為987-->
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Background="Blue">BTN7</Button>
+            <Button Background="Red">BTN8</Button>
+            <Button Background='Green'>BTN9</Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Button>BTN4</Button>
+            <Button>BTN5</Button>
+            <Button>BTN6</Button>
+        </StackPanel>
+    </Grid>
+</Window>
